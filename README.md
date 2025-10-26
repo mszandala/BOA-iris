@@ -14,10 +14,11 @@ Instrukcja szybkiego wysłania projektu na GitHub
    - Pobierz instalator: https://git-scm.com/download/win i uruchom go.
    - Alternatywy: `winget install --id Git.Git -e --source winget` lub `choco install git` (jeśli masz te narzędzia).
 
-2. Otwórz nowy PowerShell i przejdź do folderu projektu:
+2. Otwórz nowy PowerShell i przejdź do folderu projektu (zamień poniższą ścieżkę na swoją lokalną):
 
 ```powershell
-cd "C:\Matyna_C\Studia\Nowy folder"
+# Przykład (zamień na ścieżkę do twojego projektu):
+cd "<ścieżka\do\twojego\projektu>"
 ```
 
 3. Skonfiguruj Git (tylko raz):
