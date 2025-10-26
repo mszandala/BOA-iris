@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+*.egg
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Distribution / packaging
+pip-wheel-metadata/
+*.egg-info/
+
+# Test outputs / coverage
+.pytest_cache/
+htmlcov/
+
+# Local environment / secrets
+.env
+.venv
+env/
+ENV/
+
+# Output files
+result.txt
