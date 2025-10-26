@@ -27,13 +27,16 @@ Możesz zmienić parametry BOA (np. N, MaxIter, p, alpha, c_init, K_min, K_max) 
 
 ## Tabela zmian parametrów 
 
-| Parametr | Co oznacza | Opis |
+| Parametr (z przykładem)| Co oznacza | Opis |
 |---|---|---|
-| N = 10 | To liczba „motyli” – czyli ile różnych propozycji K jednocześnie bada algorytm. 
-🔹 Więcej motyli → więcej pomysłów → większa szansa na dobre rozwiązanie, ale dłuższy czas działania. 
-Przykład: jeśli N=10, to algorytm jednocześnie testuje 10 różnych wartości K. | |
-| MaxIter (iteracje) | | |
-| p (prob. przełączenia) | | |
+| N = 10 | Wielkość populacji | To liczba „motyli” – czyli ile różnych propozycji K jednocześnie bada algorytm. <br>🔹 Więcej motyli → więcej pomysłów → większa szansa na dobre rozwiązanie, ale dłuższy czas działania.  <br>Przykład: jeśli N=10, to algorytm jednocześnie testuje 10 różnych wartości K. |
+| MaxIter = 35 | Liczba iteracji (rund)| To ile razy motyle będą latać po „świecie rozwiązań”. Każda iteracja to jedna runda, w której motyle próbują się przemieścić i znaleźć lepszy wynik.  <br>🔹 Więcej iteracji → dłuższe, dokładniejsze szukanie, ale większy czas obliczeń. | 
+| p = 0.8 | Prawdopodobieństwo przełączania | To określa, czy motyl leci w stronę najlepszego motyla (eksploatacja), czy losowo w stronę innych (eksploracja).  <br>🔹 Jeśli p = 0.8 → 80% czasu motyle idą w stronę najlepszego rozwiązania, 20% czasu błądzą, szukając czegoś nowego.  <br>📘 Dzięki temu algorytm nie utknie w jednym miejscu. |
+| alpha = 0.5 | Wykładnik mocy (siła zapachu)| Określa, jak bardzo „zapach” (czyli jakość rozwiązania) wpływa na ruch motyla.<br>🔹 Większe alpha → silniejszy wpływ dobrych rozwiązań (motyle szybciej zbliżają się do najlepszego).<br>🔹 Mniejsze alpha → ruchy są bardziej przypadkowe.|
+| c_init = 0.1 | Współczynnik sensoryczny | To początkowa „czułość nosa motyla” 👃🦋 — określa, jak daleko motyl może polecieć.<br>🔹 Duże c_init → motyle latają daleko (więcej eksploracji). <br>🔹 Małe c_init → motyle robią krótkie kroki (dokładniejsze dopieszczanie). <br>📉 Zwykle c maleje z czasem (np. c = c_init * (1 - t/MaxIter)), by na końcu precyzyjnie zbliżyć się do najlepszego wyniku.|
+| K_min = 1 | Minimalna wartość K (dolna granica)| To najniższa wartość, jaką może przyjąć K (liczba sąsiadów w KNN).<br>W KNN nie może być 0, więc zwykle zaczynamy od 1. |
+| K_max = 70 | Maksymalna wartość K (górna granica) | To najwyższa wartość K, jaką może testować algorytm.<br>🔹 Jeśli dasz bardzo duże K, model KNN stanie się „leniwy” (będzie uśredniał zbyt wiele punktów).<br>🔹 Typowo ustawia się coś między 20 a 100 w zależności od liczby próbek.|
+
 
 
 ## Clone & run (szybkie kroki)
