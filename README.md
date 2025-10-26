@@ -23,8 +23,9 @@ cd "C:\Matyna_C\Studia\Nowy folder"
 3. Skonfiguruj Git (tylko raz):
 
 ```powershell
-git config --global user.name "Martyna Szandala"
-git config --global user.email "martyna.szandala1@gmail.com"
+# Ustaw swoje imię i email (wstaw tutaj swoje dane — nie zostawiaj cudzych danych w README)
+git config --global user.name "Twoje Imię"
+git config --global user.email "twoj@email.com"
 ```
 
 4. Inicjalizacja, commit i ustawienie gałęzi `main`:
